@@ -86,6 +86,11 @@ Example:
 #SKIEL,0,11434,m2@hGSGC@GmlPPETh2PETItqSKq12X@Itvq4tvXSGXTETETEsXScHSHS@GvTITIr0tqSF1wuSEaG@2q11D@HsxswUgzsuh3MtSMusswD7GUEqSBG@Q@GsTGhNBE@Kn7TESJSGSEq4XTGVGxaqvqBE@sg2h@Hvssr8n3r2SKTEXmGr2UGuTNwSn5SGytyvshEr0tq2qXSGSHwXSC@Rw@m6ESEXUETMXSIqSGg5VGq4q10X@XmPMTGg2sSEq3SH@P2GSESE@Xh@2tXSGD8ESHsSGggvBD@EsSESHghEsSESISEsSGtg2SGhh2mGtsSEug2gsD7GVGYESHTgSEThLXbXD8h2gSgSLTGTHa2Y@Xh2h2@SEUEXgcSC@Y2BXgYD@BaEagC@ahi2SZZ,
 ```
 
+## Tested on
+
+- Python 3.14.4, Linux
+- Python 3.12.7, Windows
+
 ## Resource used
 
 - https://git.sr.ht/~showy_fence/new-lr2ir/tree/master/item/src/routes/lr2ir/api/getghost.rs
