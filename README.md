@@ -52,11 +52,11 @@ python main.py 117388 --include-replays
 
 ## Example output
 
-The script will create a file named <PLAYER_ID>_<PLAYER_NAME>_rivalinfo.xml with
-the output of the LR2IR API route for
+The script will create a file named <PLAYER_ID>\_<PLAYER_NAME>\_rivalinfo.xml
+with the output of the LR2IR API route for
 `getplayerxml.cgi?id={PLAYER_ID}&lastupdate`, and a file named
-<PLAYER_ID>_<PLAYER_NAME>_mypage.html with the output of the LR2IR website route
-for `search.cgi?mode=mypage&playerid={PLAYER_ID}`.
+<PLAYER_ID>\_<PLAYER_NAME>\_mypage.html with the output of the LR2IR website
+route for `search.cgi?mode=mypage&playerid={PLAYER_ID}`.
 
 The former contains all of your PBs, the other contains your userpage, which has
 some useful content such as bio, dan rank, amount of plays, and rival names and
