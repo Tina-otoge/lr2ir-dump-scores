@@ -9,6 +9,32 @@ This was hastily wrote after the announcement that LR2IR will shutdown on
 access to my old LR2IR accounts anymore, but want to preserve my old play
 history.
 
+:warning: I strongly advise against attempting to scrape the entirety of LR2IR.
+Whether its by using this script, or any other mean. There are numerous other
+projects that already try to be all encompassing in preserving the data of the
+website.
+
+:warning: **DO NOT ATTEMPT TO SCRAPE THE ENTIRETY OF LR2IR**
+
+:warning: **DO NOT TRY TO REMOVE THE SELF-IMPOSED RATE-LIMITING**
+
+The motivation behind this script was that I wanted a backup of MY personal
+LR2IR data. Something I always wanted, whether the site was going to shut down
+or not. This announce only added an ultimatum and forced me to complete this
+project before the 31st of May.
+
+If you are also interested into dumping your own PBs and replay data, then this
+script can be useful to you. Otherwise, you should probably look elsewhere.
+
+## Rate-limiting
+
+The script has an hardcoded self-rate limiting of 1 req/s. If a response is
+obtained from LR2IR in less time than that, the script will throttle itself, as
+to not overload the website.
+
+When requests are dropped, the script will retry infinitely with an exponential
+backoff timeout (wait 2s, then 4, 8, 16, 32, then cap at 60).
+
 
 ## Usage
 
@@ -26,12 +52,17 @@ python main.py 117388 --include-replays
 
 ## Example output
 
-The script will create a file named <PLAYER_ID>_<PLAYER_NAME>.xml with the
-output of the LR2IR API route for `getplayerxml.cgi?id={PLAYER_ID}&lastupdate`.
+The script will create a file named <PLAYER_ID>_<PLAYER_NAME>_rivalinfo.xml with
+the output of the LR2IR API route for
+`getplayerxml.cgi?id={PLAYER_ID}&lastupdate`, and a file named
+<PLAYER_ID>_<PLAYER_NAME>_mypage.html with the output of the LR2IR website route
+for `search.cgi?mode=mypage&playerid={PLAYER_ID}`.
 
-Example:
+The former contains all of your PBs, the other contains your userpage, which has
+some useful content such as bio, dan rank, amount of plays, and rival names and
+IDs.
 
-`117388_SKIEL.xml`
+Example `117388_SKIEL_rivalinfo.xml`:
 
 ```xml
 #<?xml version="1.0" encoding="shift_jis"?>
